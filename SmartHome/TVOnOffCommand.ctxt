@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=TVOnOffCommand
+comment1.params=tv
+comment1.target=TVOnOffCommand(TV)
+comment2.params=
+comment2.target=void\ execute()
+numComments=3

@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.target=TV
+comment1.params=
+comment1.target=TV()
+comment10.params=
+comment10.target=void\ updateImage()
+comment2.params=
+comment2.target=void\ toggleTV()
+comment3.params=
+comment3.target=void\ playPause()
+comment4.params=
+comment4.target=void\ updateTVTrack()
+comment5.params=
+comment5.target=void\ volumeUp()
+comment6.params=
+comment6.target=void\ volumeDown()
+comment7.params=
+comment7.target=void\ skip()
+comment8.params=
+comment8.target=void\ back()
+comment9.params=direction
+comment9.target=void\ chooseSong(int)
+numComments=11

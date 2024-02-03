@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=LightOffCommand
+comment1.params=light
+comment1.target=LightOffCommand(Light)
+comment2.params=
+comment2.target=void\ execute()
+numComments=3
