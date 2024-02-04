@@ -2,13 +2,11 @@
  * Concrete Command - encapsulates receiver and binds receiver to possible action
  */
 
-public class TVPlayPauseCommand implements ICommand 
+public class TVPlayPauseCommand extends TVCommand implements ICommand 
 {
-    TV tv;
-    
     public TVPlayPauseCommand(TV tv)
     {
-        this.tv = tv;
+        super(tv);
     }
     
     @Override

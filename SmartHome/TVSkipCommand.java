@@ -2,13 +2,11 @@
  * Concrete Command - encapsulates receiver and binds receiver to possible action
  */
 
-public class TVSkipCommand implements ICommand 
+public class TVSkipCommand extends TVCommand implements ICommand 
 {
-    TV tv;
-    
     public TVSkipCommand(TV tv)
     {
-        this.tv = tv;
+        super(tv);
     }
     
     @Override

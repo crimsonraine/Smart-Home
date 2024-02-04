@@ -2,13 +2,11 @@
  * Concrete Command  - encapsulates receiver and binds receiver to possible action
  */
 
-public class TVVolUpCommand implements ICommand 
+public class TVVolUpCommand extends TVCommand implements ICommand 
 {
-    TV tv;
-    
     public TVVolUpCommand(TV tv)
     {
-        this.tv = tv;
+        super(tv);
     }
     
     @Override
