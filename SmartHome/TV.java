@@ -1,6 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.util.ArrayList;
 
+/**
+ * Receiver
+ */
+
 public class TV extends Actor {
 
     private boolean tvOn;
@@ -13,15 +17,16 @@ public class TV extends Actor {
 
     public TV() {
         tvOn = false;
-        isPaused = false;
+        isPaused = true;
         volume = 50;
         onImage = new GreenfootImage("tv_on.png");
-        onImage.scale(onImage.getWidth() / 5,onImage.getHeight() / 5);
+        onImage.scale(onImage.getWidth() / 6,onImage.getHeight() / 6);
         offImage = new GreenfootImage("tv_off.png");
-        offImage.scale(offImage.getWidth() / 5,offImage.getHeight() / 5);
+        offImage.scale(offImage.getWidth() / 6,offImage.getHeight() / 6);
 
         tracks = new ArrayList<>();
         tracks.add(new GreenfootSound("track1.mp3"));
+
         tracks.add(new GreenfootSound("track2.mp3"));
         tracks.add(new GreenfootSound("track3.mp3"));
         tracks.add(new GreenfootSound("track4.mp3"));
@@ -37,15 +42,11 @@ public class TV extends Actor {
     }
 
     public void playPause() {
-        if (tvOn) {
-            isPaused = !isPaused;
-            updateTVTrack();
-        }
+        if (tvOn) isPaused = !isPaused;
     }
 
     private void updateTVTrack() {
-        updateImage();
-        if (isPaused) {
+        if (isPaused || !tvOn) {
             tracks.get(currentTrack).pause();
         }
         else if (tracks.get(currentTrack).isPlaying()) {
@@ -58,15 +59,13 @@ public class TV extends Actor {
 
     public void volumeUp() {
         if (tvOn && volume < 100) {
-            volume++;
-            updateTVTrack();
+            volume = volume + 10;
         }
     }
 
     public void volumeDown() {
         if (tvOn && volume > 0) {
-            volume--;
-            updateTVTrack();
+            volume = volume - 10;
         }
     }
 
@@ -80,10 +79,11 @@ public class TV extends Actor {
 
     private void chooseSong(int direction) {
         if (tvOn) {
-            playPause();
+            isPaused = true;
+            updateTVTrack();
+            isPaused = false;
             currentTrack =
                 (tracks.size() + currentTrack + direction) % tracks.size();
-            updateTVTrack();
         }
     }
 
@@ -93,5 +93,10 @@ public class TV extends Actor {
         } else {
             setImage(offImage);
         }
+    }
+    
+    public void act() {
+        updateTVTrack();
+        updateImage();
     }
 }

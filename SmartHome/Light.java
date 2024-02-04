@@ -1,8 +1,12 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
+/**
+ * Receiver
+ */
+
 public class Light extends Actor
 {
-    private boolean lightOn;
+    protected boolean lightOn;
     private GreenfootImage onImage;
     private GreenfootImage offImage;
 
@@ -14,15 +18,23 @@ public class Light extends Actor
         updateImage();
         lightOn = false;
     }
+    
+    public Light(String onImageLoc, String offImageLoc) {
+        onImage = new GreenfootImage(onImageLoc);
+        onImage.scale(onImage.getWidth() * 2,onImage.getHeight() * 2);
+        offImage = new GreenfootImage(offImageLoc);
+        offImage.scale(offImage.getWidth() * 2,offImage.getHeight() * 2);
+        updateImage();
+        lightOn = false;
+    }
 
     public void flipLight() {
         if (lightOn) {
-            turnLightOn();
-        }
-        else {
             turnLightOff();
         }
-
+        else {
+            turnLightOn();
+        }
     }
 
     public void turnLightOn() {

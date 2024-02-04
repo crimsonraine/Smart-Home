@@ -1,9 +1,12 @@
 #BlueJ class context
 comment0.target=TV
+comment0.text=\n\ Receiver\n
 comment1.params=
 comment1.target=TV()
 comment10.params=
 comment10.target=void\ updateImage()
+comment11.params=
+comment11.target=void\ act()
 comment2.params=
 comment2.target=void\ toggleTV()
 comment3.params=
@@ -20,4 +23,4 @@ comment8.params=
 comment8.target=void\ back()
 comment9.params=direction
 comment9.target=void\ chooseSong(int)
-numComments=11
+numComments=12

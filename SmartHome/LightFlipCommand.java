@@ -1,3 +1,7 @@
+/**
+ * Concrete Command
+ */
+
 public class LightFlipCommand implements ICommand 
 {
     Light light;

@@ -1,3 +1,7 @@
+/**
+ * Concrete Command
+ */
+
 public class TVSkipCommand implements ICommand 
 {
     TV tv;

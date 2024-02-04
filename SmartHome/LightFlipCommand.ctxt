@@ -1,5 +1,6 @@
 #BlueJ class context
 comment0.target=LightFlipCommand
+comment0.text=\n\ Concrete\ Command\n
 comment1.params=light
 comment1.target=LightFlipCommand(Light)
 comment2.params=

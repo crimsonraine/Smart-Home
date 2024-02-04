@@ -1,5 +1,6 @@
 #BlueJ class context
 comment0.target=TVPlayPauseCommand
+comment0.text=\n\ Concrete\ Command\n
 comment1.params=tv
 comment1.target=TVPlayPauseCommand(TV)
 comment2.params=

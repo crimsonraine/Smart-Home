@@ -1,13 +1,16 @@
 #BlueJ class context
 comment0.target=Light
+comment0.text=\n\ Receiver\n
 comment1.params=
 comment1.target=Light()
-comment2.params=
-comment2.target=void\ flipLight()
+comment2.params=onImageLoc\ offImageLoc
+comment2.target=Light(java.lang.String,\ java.lang.String)
 comment3.params=
-comment3.target=void\ turnLightOn()
+comment3.target=void\ flipLight()
 comment4.params=
-comment4.target=void\ turnLightOff()
+comment4.target=void\ turnLightOn()
 comment5.params=
-comment5.target=void\ updateImage()
-numComments=6
+comment5.target=void\ turnLightOff()
+comment6.params=
+comment6.target=void\ updateImage()
+numComments=7

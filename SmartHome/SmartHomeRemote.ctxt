@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=SmartHomeRemote
+comment0.text=\n\ Invoker\n
+comment1.params=command
+comment1.target=void\ setCommand(ICommand)
+comment2.params=
+comment2.target=void\ executeCommand()
+numComments=3

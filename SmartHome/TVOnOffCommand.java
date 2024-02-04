@@ -1,3 +1,7 @@
+/**
+ * Concrete Command
+ */
+
 public class TVOnOffCommand implements ICommand 
 {
     TV tv;
