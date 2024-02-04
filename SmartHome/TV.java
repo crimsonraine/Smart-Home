@@ -25,8 +25,8 @@ public class TV extends Actor {
         offImage.scale(offImage.getWidth() / 6,offImage.getHeight() / 6);
 
         tracks = new ArrayList<>();
+        tracks.add(new GreenfootSound("track0.mp3"));
         tracks.add(new GreenfootSound("track1.mp3"));
-
         tracks.add(new GreenfootSound("track2.mp3"));
         tracks.add(new GreenfootSound("track3.mp3"));
         tracks.add(new GreenfootSound("track4.mp3"));
