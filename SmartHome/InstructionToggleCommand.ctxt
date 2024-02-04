@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=InstructionToggleCommand
-comment0.text=\n\ Concrete\ Command\n
+comment0.text=\n\ Concrete\ Command\ -\ encapsulates\ receiver\ and\ binds\ receiver\ to\ possible\ action\n
 comment1.params=instructions
 comment1.target=InstructionToggleCommand(Instructions)
 comment2.params=

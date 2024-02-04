@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Receiver
+ * Receiver - defines the operations called by commands and carries out requests
  */
 
 public class Light extends Actor
@@ -28,7 +28,7 @@ public class Light extends Actor
         lightOn = false;
     }
 
-    public void flipLight() {
+    public void flipLight() { // method to be associated with a command
         if (lightOn) {
             turnLightOff();
         }

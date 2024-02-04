@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=TVBackCommand
-comment0.text=\n\ Concrete\ Command\n
+comment0.text=\n\ Concrete\ Command\ -\ encapsulates\ receiver\ and\ binds\ receiver\ to\ possible\ action\n
 comment1.params=tv
 comment1.target=TVBackCommand(TV)
 comment2.params=

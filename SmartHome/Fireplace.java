@@ -1,11 +1,9 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Fireplace here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Receiver - defines the operations called by commands and carries out requests
  */
+
 public class Fireplace extends Light
 {
     private GreenfootSound fireplaceSound;
@@ -16,7 +14,7 @@ public class Fireplace extends Light
     }
 
     @Override
-    public void flipLight() {
+    public void flipLight() { // method to be associated with a command
         super.flipLight();
         if (super.lightOn) {
             fireplaceSound.playLoop();

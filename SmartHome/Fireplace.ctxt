@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Fireplace
-comment0.text=\n\ Write\ a\ description\ of\ class\ Fireplace\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment0.text=\n\ Receiver\ -\ defines\ the\ operations\ called\ by\ commands\ and\ carries\ out\ requests\n
 comment1.params=
 comment1.target=Fireplace()
 comment2.params=

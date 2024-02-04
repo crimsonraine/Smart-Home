@@ -1,5 +1,6 @@
 #BlueJ class context
 comment0.target=ICommand
+comment0.text=\n\ Command\ Interface\ -\ for\ declaring\ a\ command,\ which\n\ the\ other\ concrete\ command\ classes\ will\ implement\n
 comment1.params=
 comment1.target=void\ execute()
 numComments=2

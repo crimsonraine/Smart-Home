@@ -1,11 +1,10 @@
 /**
- * Invoker
+ * Invoker - requests command to be carried out
  */
 
 public class SmartHomeRemote  
 {
-    // instance variables - replace the example below with your own
-    private ICommand command;
+    private ICommand command; // reference to command
     
     public void setCommand(ICommand command) {
         this.command = command;

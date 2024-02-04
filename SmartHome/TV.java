@@ -2,7 +2,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.util.ArrayList;
 
 /**
- * Receiver
+ * Receiver - defines the operations called by commands and carries out requests
  */
 
 public class TV extends Actor {
@@ -18,11 +18,13 @@ public class TV extends Actor {
     public TV() {
         tvOn = false;
         isPaused = true;
-        volume = 50;
+        
         onImage = new GreenfootImage("tv_on.png");
         onImage.scale(onImage.getWidth() / 6,onImage.getHeight() / 6);
         offImage = new GreenfootImage("tv_off.png");
         offImage.scale(offImage.getWidth() / 6,offImage.getHeight() / 6);
+
+        volume = 50;
 
         tracks = new ArrayList<>();
         tracks.add(new GreenfootSound("track0.mp3"));
@@ -30,18 +32,17 @@ public class TV extends Actor {
         tracks.add(new GreenfootSound("track2.mp3"));
         tracks.add(new GreenfootSound("track3.mp3"));
         tracks.add(new GreenfootSound("track4.mp3"));
-
         currentTrack = 0;
 
         updateImage();
     }
 
-    public void toggleTV() {
+    public void toggleTV() { // method to be associated with a command
         tvOn = !tvOn;
         updateImage();
     }
 
-    public void playPause() {
+    public void playPause() { // method to be associated with a command
         if (tvOn) isPaused = !isPaused;
     }
 
@@ -57,23 +58,23 @@ public class TV extends Actor {
         }
     }
 
-    public void volumeUp() {
+    public void volumeUp() { // method to be associated with a command
         if (tvOn && volume < 100) {
             volume = volume + 10;
         }
     }
 
-    public void volumeDown() {
+    public void volumeDown() { // method to be associated with a command
         if (tvOn && volume > 0) {
             volume = volume - 10;
         }
     }
 
-    public void skip() {
+    public void skip() {  // method to be associated with a command
         chooseSong(1);
     }
 
-    public void back() {
+    public void back() { // method to be associated with a command
         chooseSong(-1);
     }
 

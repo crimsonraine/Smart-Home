@@ -2,7 +2,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.util.ArrayList;
 
 /**
- * Client
+ * Client - creates receivers (Lights, Fireplaces, TVs) and creates commands required by
+ * the invoker (SmartHomeRemote).
+ * The Client indirectly sends instructions to receivers through these commands.
  */
 
 public class MyWorld extends World
@@ -28,8 +30,9 @@ public class MyWorld extends World
         }
         setBackground(bgs.get(0));
 
-        remote = new SmartHomeRemote();
+        remote = new SmartHomeRemote(); //  invoker
 
+        // clients
         Light floorLight1 = new Light();
         addObject(floorLight1, getWidth() / 6, getHeight() * 7 / 20);
 
@@ -50,11 +53,12 @@ public class MyWorld extends World
         television = new TV();
         addObject(television, getWidth() / 4, getHeight() * 5 / 8);
         
+        // simple instructions
         instructions = new Instructions();
         addObject(instructions, getWidth() / 2, getHeight() / 2);
     }
 
-    private void checkKeys() {
+    private void checkKeys() { // creates commands to hand off to SmartHomeRemote 
         String key = Greenfoot.getKey();
         if (key != null && !key.equals(lastKey)) {
             switch (key) {
@@ -100,12 +104,12 @@ public class MyWorld extends World
         checkKeys();
     }
 
-    private void hitButton(ICommand command) {
+    private void hitButton(ICommand command) { // sets and executes commands
         remote.setCommand(command);
         remote.executeCommand();
     }
 
-    private void updateLighting(int i) {
+    private void updateLighting(int i) { // simple lighting depending on how many lights are on
         if (on[i] == 1) on[i] = 0;
         else on[i] = 1;
 

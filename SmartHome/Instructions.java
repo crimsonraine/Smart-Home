@@ -1,5 +1,9 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
+/**
+ * Simple Instructions Text
+ */
+
 public class Instructions extends Actor
 {
     private GreenfootImage instructions;

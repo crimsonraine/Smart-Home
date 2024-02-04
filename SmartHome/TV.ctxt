@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=TV
-comment0.text=\n\ Receiver\n
+comment0.text=\n\ Receiver\ -\ defines\ the\ operations\ called\ by\ commands\ and\ carries\ out\ requests\n
 comment1.params=
 comment1.target=TV()
 comment10.params=
